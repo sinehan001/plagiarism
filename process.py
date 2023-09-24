@@ -1,22 +1,22 @@
-from flask import Flask, render_template, request, jsonify
 import re
+import os
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import os
-
-app = Flask(__name__)
 
 
 # Step 1: Preprocessing
 def preprocess_text(text):
     text = text.lower()
+    # Replace consecutive whitespace characters with a single space
+    text = re.sub(r'\s+', ' ', text)
+    # Remove characters that are not alphanumeric or whitespace
     text = re.sub(r'[^\w\s]', '', text)
     return text
 
 
 # Define the filename for the dataset JSON file
-dataset_file = 'plagiarism_dataset.json'
+dataset_file = 'dataset/plagiarism_dataset.json'
 
 # Check if the dataset JSON file exists
 if os.path.exists(dataset_file):
@@ -59,24 +59,3 @@ def check_plagiarism(new_document, original_filename, filename, project_name, co
     dataset.to_json(dataset_file, orient='records')
 
     return "No plagiarism detected. Document added to the dataset."
-
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-
-@app.route('/check_plagiarism', methods=['POST'])
-def check_plagiarism_route():
-    document = request.form['document']
-    original_filename = request.form['original_filename']
-    filename = request.form['filename']
-    project_name = request.form['project_name']
-    college_name = request.form['college_name']
-
-    result = check_plagiarism(document, original_filename, filename, project_name, college_name)
-    return jsonify({"result": result})
-
-
-if __name__ == '__main__':
-    app.run(debug=True)

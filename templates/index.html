@@ -9,12 +9,8 @@
 <body>
     <h1>Plagiarism Checker</h1>
     <form id="plagiarism-form">
-        <label for="document">Enter your document:</label>
-        <textarea id="document" name="document" rows="4" cols="50"></textarea><br><br>
-        <label for="original_filename">Original Filename:</label>
-        <input type="text" id="original_filename" name="original_filename"><br><br>
-        <label for="filename">Filename:</label>
-        <input type="text" id="filename" name="filename"><br><br>
+        <label for="documents">Upload Document:</label>
+        <input type="file" name="documents" id="documents" accept=".doc, .docx, .pdf, .txt" multiple required><br><br>
         <label for="project_name">Project Name:</label>
         <input type="text" id="project_name" name="project_name"><br><br>
         <label for="college_name">College Name:</label>
@@ -26,24 +22,43 @@
     <!-- Include any necessary JavaScript libraries or scripts here -->
     <script>
         document.getElementById('check-button').addEventListener('click', function () {
-            var documentText = document.getElementById('document').value;
-            var originalFilename = document.getElementById('original_filename').value;
-            var filename = document.getElementById('filename').value;
-            var projectName = document.getElementById('project_name').value;
-            var collegeName = document.getElementById('college_name').value;
+            var formData = new FormData();
+            var documentsInput = document.getElementById('documents');
+            for (var i = 0; i < documentsInput.files.length; i++) {
+                formData.append('documents', documentsInput.files[i]);
+            }
+
+            formData.append('project_name', document.getElementById('project_name').value);
+            formData.append('college_name', document.getElementById('college_name').value);
 
             fetch('/check_plagiarism', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: `document=${encodeURIComponent(documentText)}&original_filename=${encodeURIComponent(originalFilename)}&filename=${encodeURIComponent(filename)}&project_name=${encodeURIComponent(projectName)}&college_name=${encodeURIComponent(collegeName)}`,
+                body: formData,
             })
             .then(response => response.json())
             .then(data => {
                 document.getElementById('result').innerText = data.result;
             });
         });
+<!--        document.getElementById('check-button').addEventListener('click', function () {-->
+<!--            var documentText = document.getElementById('document').value;-->
+<!--            var originalFilename = document.getElementById('original_filename').value;-->
+<!--            var filename = document.getElementById('filename').value;-->
+<!--            var projectName = document.getElementById('project_name').value;-->
+<!--            var collegeName = document.getElementById('college_name').value;-->
+
+<!--            fetch('/check_plagiarism', {-->
+<!--                method: 'POST',-->
+<!--                headers: {-->
+<!--                    'Content-Type': 'application/x-www-form-urlencoded',-->
+<!--                },-->
+<!--                body: `document=${encodeURIComponent(documentText)}&original_filename=${encodeURIComponent(originalFilename)}&filename=${encodeURIComponent(filename)}&project_name=${encodeURIComponent(projectName)}&college_name=${encodeURIComponent(collegeName)}`,-->
+<!--            })-->
+<!--            .then(response => response.json())-->
+<!--            .then(data => {-->
+<!--                document.getElementById('result').innerText = data.result;-->
+<!--            });-->
+<!--        });-->
     </script>
 </body>
 </html>

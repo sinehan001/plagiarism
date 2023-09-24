@@ -1,0 +1,79 @@
+[
+  {
+    "text": "this is a sample document for testing",
+    "original_filename": "document1.txt",
+    "filename": "document1.txt",
+    "project_name": "Project A",
+    "college_name": "College X"
+  },
+  {
+    "text": "this is a test document for the example",
+    "original_filename": "document2.txt",
+    "filename": "document2.txt",
+    "project_name": "Project B",
+    "college_name": "College Y"
+  },
+  {
+    "text": "this is a completely different document",
+    "original_filename": "document3.txt",
+    "filename": "document3.txt",
+    "project_name": "Project C",
+    "college_name": "College Z"
+  },
+  {
+    "text": "this is good to see you guys bye",
+    "original_filename": "hello.txt",
+    "filename": "123.txt",
+    "project_name": "Next Greatest Number in c",
+    "college_name": "Velammal Engineering College "
+  },
+  {
+    "text": "super",
+    "original_filename": "1we",
+    "filename": "23",
+    "project_name": "213",
+    "college_name": "213"
+  },
+  {
+    "text": "supe",
+    "original_filename": "123",
+    "filename": "sad",
+    "project_name": "Next Greatest Number in c",
+    "college_name": "wqeq"
+  },
+  {
+    "text": "hello this is sinehan",
+    "original_filename": "abc",
+    "filename": "def",
+    "project_name": "remove all duplicate",
+    "college_name": "123"
+  },
+  {
+    "text": "uploads2pdf",
+    "original_filename": "2.pdf",
+    "filename": "2.pdf",
+    "project_name": "Next Greatest Number in c",
+    "college_name": "Velammal Engineering College "
+  },
+  {
+    "text": "uploadssodapdfconvertedpdf",
+    "original_filename": "sodapdf-converted.pdf",
+    "filename": "sodapdf-converted.pdf",
+    "project_name": "Next Greatest Number in c",
+    "college_name": "Velammal Engineering College "
+  },
+  {
+    "text": "2 a dashboard creation using visualization tools for the healthcare code code  import dash import dash_core_components as dcc import dash_html_components as html from dashdependencies import input output import pandas as pd import plotlyexpress as px  sample healthcare data replace with your data source data  pdread_csvhealthcare_datacsv  create a dash web application app  dashdash_name_  define the layout of the dashboard applayout  htmldiv htmlh1healthcare data dashboard  dropdown for selecting a specific metric dccdropdown idmetricdropdown options label metric 1 value metric1 label metric 2 value metric2  add more options as needed  valuemetric1  default selected metric   graph to display the selected metric dccgraphidmetricgraph   define callback to update the graph based on the selected metric appcallback outputmetricgraph figure inputmetricdropdown value  def update_graphselected_metric  filter the data based on the selected metric filtered_data  datadatametric  selected_metric  create a plotly figure for visualization fig  pxbarfiltered_data xxaxiscolumn yyaxiscolumn titlefselected_metric visualization return fig if _name_  _main_ apprun_serverdebugtrue 2 b dashboard creation using visualization tools for the finance code code  import dash import dash_core_components as dcc import dash_html_components as html from dashdependencies import input output import pandas as pd import plotlyexpress as px  sample finance data replace with your data source data  pdread_csvfinance_datacsv  create a dash web application app  dashdash_name_  define the layout of the dashboard applayout  htmldiv htmlh1finance data dashboard  dropdown for selecting a financial metric dccdropdown idmetricdropdown options label stock price value stock_price label market cap value market_cap  add more options as needed  valuestock_price  default selected metric   graph to display the selected metric dccgraphidmetricgraph   define callback to update the graph based on the selected metric appcallback outputmetricgraph figure inputmetricdropdown value  def update_graphselected_metric  filter the data based on the selected metric filtered_data  datadatametric  selected_metric  create a plotly figure for visualization fig  pxlinefiltered_data xdate yvalue titlefselected_metric visualization return fig if _name_  _main_ apprun_serverdebugtrue ",
+    "original_filename": "2.pdf",
+    "filename": "2.pdf",
+    "project_name": "Next Greatest Number in c",
+    "college_name": "Velammal Engineering College "
+  },
+  {
+    "text": "sinehan s 22nd december 2002 seeking a challenging role to utilize technical  nontechnical skills and contribute to company growth  looking to enhance skills such as teamwork and problemsolving education be computer science and engineering velammal engineering college cgpa  9425th sem xii sethu bhaskara matric higher secondary school 9533 x excel matric hr sec school 958 mini projects ecircle hub web application  full stack using core php mysql eventally  web application full stack using core php cron jobs mysql certificate genie  web application full stack using core php mysql graphical password authentication web application  full stack using node js firebase mobile application  flutter app using dart firebase weather forecast  web application full stack using react js healer  mobile application flutter app using dart api using node js diet  web applicationongoing backend using codeigniter framework internships vbind innovation pvt ltd hybrid web development app development api onehost onsite web development api shiash info solutions pvt ltd remote programming in java web development using jsp 91 9884846075 sinehan001gmailcom sinehan001githubioresume linkedincominsinehans githubcomsinehan001 hackerrankcomsinehan001 skillrackcomfacesresumexhtml industrial projects vbind innovation pvt ltd hybrid mathematics adaptability saline  web application full stack using core php api using node js mysql garbage viewer  web application full stack using node js with express api using node js mongodb iot switch  mobile application flutter backend  firebase digital twin backend using javascript onehost onsite marketino  web application full stack using core php api using node js cron jobs mysql shiash info solutions pvt ltd remote mercurial integritybased approach curb for big data  web application backend using jsp mysql ajeya infosol pvt ltd onsite fcemail backend using php mysql global innovations frontend using html css newsletter frontend using html css nutech frontend using html css platforms  tools java  eclipse netbeans php node js  vs code sublime text dart  fluttervs code android studio api testing  postman hosting  heroku godaddy railway cli  github cli heroku cli linux clissh interests app development web development api languages tamil english native or bilingual pro\ufb01ciency professional working pro\ufb01ciency ",
+    "original_filename": "test.pdf",
+    "filename": "test.pdf",
+    "project_name": "Next Greatest Number in c",
+    "college_name": "Velammal Engineering College "
+  }
+]
